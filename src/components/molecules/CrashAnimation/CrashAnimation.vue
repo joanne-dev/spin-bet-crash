@@ -50,7 +50,6 @@ export default {
     const crashStore = useCrashStore();
     const { ui } = storeToRefs(crashStore);
     const { setupAnimation, startAnimation, validateActionFunction } = useCrashAnimation(crashStore);
-    const fadeBackground = ref(true);
 
     const multiplierFormatted = computed(() => {
       return ui.value.betSection.multiplier.value ? ui.value.betSection.multiplier.value.toFixed(2) + 'X' : '';
@@ -70,10 +69,8 @@ export default {
     });
 
     return {
-      fadeBackground,
       multiplierFormatted,
       ui,
-      crashStore,
       explode,
     };
   },
