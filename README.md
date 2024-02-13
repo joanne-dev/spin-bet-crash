@@ -4,3 +4,10 @@ Hello! 👋 I am happy to reach this point of sending the solution for the techn
 ## Run this command in the root folder to test the challenge
 ```npm i```
 ```npm run dev```
+
+
+I some videos about a crash games that I develop in my current job you can see it [here](https://drive.google.com/file/d/1S6AZH9Ol-UXTFIWGGsy0nNYFUiWuSbzt/view?usp=sharing) this is another crash [here](https://drive.google.com/file/d/14HBs-W6ajknNdZiY_X7qUszvnNgWzKN3/view?usp=sharing) and this one :D [here](https://drive.google.com/file/d/1nG5wSD5-oHR6gGQByBmsXjuZ14yVUbCr/view?usp=sharing)
+and I developed a Double game that I made in the past with React, you can see it [here](https://github.com/joanne-dev/blaze-challenge-double)
+
+Thank you so much I hope you like it! 🚀 and I hope to work with you soon! 🚀
+```
