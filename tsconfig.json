@@ -1,0 +1,29 @@
+{
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "target": "esnext",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowImportingTsExtensions": true,
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "declaration": true
+  },
+  "declaration": true,
+  "declarationDir": "./dist",
+  "emitDeclarationOnly": true,
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
