@@ -101,7 +101,7 @@ export const useCrashStore = defineStore('crash', {
       this.ui.betSection.hasBet = false;
       setTimeout(() => {
         this.ui.winAlert.isShowed = false;
-      }, 2200);
+      }, 3200);
     },
     closeErrorAlert() {
       this.ui.error.isShowed = false;
