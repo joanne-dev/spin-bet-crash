@@ -1,6 +1,7 @@
 export type GameState = {
   states: States;
   lastResults: number[];
+  multiplierAtCashOut: number;
   balance: number;
   ui: UI;
 };

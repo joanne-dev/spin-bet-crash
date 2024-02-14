@@ -82,7 +82,7 @@ export default {
       }
     };
     const cashOut = () => {
-      crashStore.cashOut();
+      crashStore.cashOut(Number(ui.value.betSection.multiplier.value.toFixed(2)));
     };
 
     const getInput = (event: any) => {

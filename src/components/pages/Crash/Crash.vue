@@ -1,7 +1,7 @@
 <template>
   <CrashStyled>
     <Header :balance="balance" />
-    <WinAlert :message="useCurrency(ui.winAlert.winAmount)" v-if="ui.winAlert.isShowed" />
+    <WinAlert :message="useCurrency(ui.winAlert.winAmount)" v-if="ui.winAlert.isShowed" :multiplier="multiplierAtCashOut"/>
     <ErrorAlert v-if="ui.error.isShowed" :message="ui.error.message" :on-click="closeErrorAlert" />
     <CrashAnimation />
     <LastResults :results="lastResults" />
@@ -39,7 +39,7 @@ export default {
   setup() {
     const { startFlow } = useFlowSimulator();
     const crashStore = useCrashStore();
-    const { ui, balance, lastResults } = storeToRefs(crashStore);
+    const { ui, balance, lastResults, multiplierAtCashOut } = storeToRefs(crashStore);
     onMounted(() => {
       startFlow();
     });
@@ -52,6 +52,7 @@ export default {
       useCurrency,
       balance,
       lastResults,
+      multiplierAtCashOut
     };
   },
 };

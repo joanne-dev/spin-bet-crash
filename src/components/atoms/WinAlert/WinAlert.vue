@@ -1,7 +1,10 @@
 <template>
   <WinAlertStyled>
     <div class="win-alert">
-      <div class="title">You won!</div>
+      <div class="multiplier">
+       multiplier {{ multiplier }}X
+      </div>
+      <div class="title">You won! </div>
       <div class="message">
         {{ message }}
       </div>
@@ -19,6 +22,10 @@ export default {
   },
   props: {
     message: {
+      type: String,
+      default: '',
+    },
+    multiplier: {
       type: String,
       default: '',
     },

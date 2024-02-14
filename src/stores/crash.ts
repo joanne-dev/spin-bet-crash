@@ -7,6 +7,7 @@ export const useCrashStore = defineStore('crash', {
       states: States.WAITING,
       lastResults: [1.7, 10.32, 100.95, 3.1, 2.4, 1.15, 3.83, 9, 100],
       balance: 100000,
+      multiplierAtCashOut: 1,
       ui: {
         timer: {
           time: 6,
@@ -92,13 +93,14 @@ export const useCrashStore = defineStore('crash', {
       this.ui.error.message = ErrorMessages.BET_AMOUNT_ERROR;
       this.ui.error.isShowed = true;
     },
-    cashOut() {
+    cashOut(multiplierAtCashOut: number) {
       this.setDisabledButton();
       this.ui.winAlert.isShowed = true;
       this.ui.winAlert.message = 'You have cashed out';
       this.ui.winAlert.winAmount = this.ui.betSection.amount * this.ui.betSection.multiplier.value;
       this.balance += this.ui.winAlert.winAmount;
       this.ui.betSection.hasBet = false;
+      this.multiplierAtCashOut = multiplierAtCashOut;
       setTimeout(() => {
         this.ui.winAlert.isShowed = false;
       }, 3200);
