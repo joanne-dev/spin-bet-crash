@@ -25,7 +25,7 @@ const CrashAnimationStyled = styled.div`
   }
   #rocket {
     position: absolute;
-    top: 350px;
+    top: 400px;
     right: 50px;
   }
 
