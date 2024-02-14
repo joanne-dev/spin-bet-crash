@@ -23,16 +23,13 @@ export const useFlowSimulator = () => {
   const graphing = () => {
     crashStore.graphing();
     getMultiplier().then((multiplier) => {
+      console.log('multiplier', multiplier);
       validateMultiplierHasFinished(multiplier);
     });
   };
 
   const validateMultiplierHasFinished = (multiplier: number) => {
-    if (multiplier > 6) {
-      ui.value.betSection.multiplier.value += 0.05;
-    } else {
-      ui.value.betSection.multiplier.value += 0.01;
-    }
+    ui.value.betSection.multiplier.value += 0.01;
     if (ui.value.betSection.multiplier.value < multiplier) {
       setTimeout(() => {
         validateMultiplierHasFinished(multiplier);
